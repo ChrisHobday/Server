@@ -1,12 +1,19 @@
 -- Echo server program
-module Main (main) where
+module Main
+  ( main ) where
 
-import Control.Concurrent (forkFinally)
+import Control.Concurrent
+  ( forkFinally )
 import qualified Control.Exception as E
-import Control.Monad (unless, forever, void)
+import Control.Monad
+  ( unless
+  , forever
+  , void )
 import qualified Data.ByteString as S
 import Network.Socket
-import Network.Socket.ByteString (recv, sendAll)
+import Network.Socket.ByteString
+  ( recv
+  , sendAll )
 
 main :: IO ()
 main = runTCPServer Nothing "3000" talk
