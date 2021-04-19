@@ -4,16 +4,16 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 2a7ee602ecc6fa2ecc86d2a9e7b34b999534745f0739aef8448bc235174d7cda
+-- hash: ad21a9d12efd0f8e604d9bcb96cd5da559cf2eaf882d06392795914212124569
 
 name:           Server
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/Server#readme>
-homepage:       https://github.com/githubuser/Server#readme
-bug-reports:    https://github.com/githubuser/Server/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2021 Author name here
+description:    Please see the README on GitHub at <https://github.com/ChrisHobday/Server#readme>
+homepage:       https://github.com/ChrisHobday/Server#readme
+bug-reports:    https://github.com/ChrisHobday/Server/issues
+author:         Chris Hobday
+maintainer:     hobday.chris@protonmail.com
+copyright:      2021 Chris Hobday
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -23,7 +23,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/Server
+  location: https://github.com/ChrisHobday/Server
 
 library
   exposed-modules:
@@ -34,6 +34,8 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , bytestring
+    , network
   default-language: Haskell2010
 
 executable Server-exe
@@ -46,6 +48,8 @@ executable Server-exe
   build-depends:
       Server
     , base >=4.7 && <5
+    , bytestring
+    , network
   default-language: Haskell2010
 
 test-suite Server-test
@@ -59,4 +63,6 @@ test-suite Server-test
   build-depends:
       Server
     , base >=4.7 && <5
+    , bytestring
+    , network
   default-language: Haskell2010
